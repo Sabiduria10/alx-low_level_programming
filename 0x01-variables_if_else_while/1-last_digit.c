@@ -4,10 +4,10 @@
 #include <stdio.h>
 
 /**
-* main - assign a random number to the variable n each time it is executed
-* The string Last digit of n
-* Return: 0
-*/
+ * main - assign a random number to the variable n each time it is executed
+ * The string Last digit of n
+ * Return: 0
+ */
 
 /* betty style doc for function main goes there */
 int main(void)
@@ -20,6 +20,10 @@ n = rand() - RAND_MAX / 2;
 /* your code goes there */
 lastn = n % 10;
 if (lastn > 5)
+{
+printf("Last digit of %d is %d and is greater than 5\n", n, lastn);
+}
+else if (lastn == 0)
 {
 printf("Last digit of %d is %d and is 0\n", n, lastn);
 }
