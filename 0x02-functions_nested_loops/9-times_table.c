@@ -6,7 +6,7 @@
  * Return: nothing.
  */
 
-void times_tables(void)
+void times_table(void)
 {
 	int row, col;
 	int mult = 0;
@@ -16,7 +16,7 @@ void times_tables(void)
 		for (col = 0; col < 10; col++)
 		{
 			mult = (row * col);
-			if (mult <10)
+			if (mult < 10)
 			{
 				if (col != 0)
 				{
@@ -37,4 +37,3 @@ void times_tables(void)
 		_putchar('\n');
 	}
 }
-
