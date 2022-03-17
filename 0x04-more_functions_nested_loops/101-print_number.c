@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** print_number - function that prints an integer..
+/**
+ * print_number - function that prints an integer..
  * @n: input value to check
  * Return: nothing.
  */
@@ -21,9 +22,9 @@ void print_number(int n)
 	if (num > 9)
 	{
 		while (num >= 10)
-		{ 
+		{
 			aux = aux * 10;
-			num = num /10;
+			num = num / 10;
 		}
 		_putchar((num2 / aux) + '0');
 		aux = aux / 10;
@@ -34,4 +35,3 @@ void print_number(int n)
 	else
 		_putchar(num + '0');
 }
-
