@@ -3,12 +3,12 @@
 /**
  * main - finds and prints the largest prime factor of the number
  * 612852475143
- * Return: 0
+ * Return: 0.
  */
 
 int main(void)
-{	
-	long num = 612852475143
+{
+	long num = 612852475143;
 	long divisor = 2;
 	long larg_prim = 0;
 
@@ -21,7 +21,6 @@ int main(void)
 		}
 		divisor += 1;
 	}
-	printf("%d\n, larg_prim);
+	printf("%ld\n", larg_prim);
 	return (0);
 }
-
