@@ -2,9 +2,10 @@
 
 /**
  * _atoi - function that convert a string to an integer
- * @S: string to convert
+ * @s: string to convert
  * Return: int
  */
+
 
 int _atoi(char *s)
 {
@@ -18,7 +19,7 @@ int _atoi(char *s)
 			signo *= -1;
 		i++;
 	}
-	while ((s[i} >= '0' && s[i] <= '9') && s[i] !=  0)
+	while ((s[i] >= '0' && s[i] <= '9') && s[i] != 0)
 	{
 		if (n >= 0)
 		{
@@ -31,6 +32,6 @@ int _atoi(char *s)
 			i++;
 		}
 	}
-signo *= -1;
-return (n * signo);
-
+	signo *= -1;
+	return (n * signo);
+}
