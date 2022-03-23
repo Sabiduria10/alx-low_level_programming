@@ -3,18 +3,18 @@
 /**
  * cap_string - capitalize all words of a string
  * @str: string
- * Return: 'str'
+ * Return: `str`
  */
 
 char *cap_string(char *str)
 {
 	int i, c;
 	int trigger;
-	char nots[] = ".;.!?(){}\n\t\" ";
+	char nots[] = ",;.!?(){}\n\t\" ";
 
-	for (i = 0, trigger = 0l str[i] != '\0'; i++)
+	for (i = 0, trigger = 0; str[i] != '\0'; i++)
 	{
-		if (str[0] > 96 && str[i] != '\0'; i++)
+		if (str[0] > 96 && str[0] < 123)
 			trigger = 1;
 		for (c = 0; nots[c] != '\0'; c++)
 		{
@@ -37,4 +37,3 @@ char *cap_string(char *str)
 	}
 	return (str);
 }
-
