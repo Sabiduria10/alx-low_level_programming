@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * reverse-array - reverse the contents of an array of integers
+ * reverse_array - reverse the contents of an array of integers
  * @a: array of integers
  * @n: number of elements in array
  */
 
-void reverse-array(int *a, int n)
+void reverse_array(int *a, int n)
 {
 	int i;
 	int h;
@@ -18,4 +18,3 @@ void reverse-array(int *a, int n)
 		a[n - i - 1] = h;
 	}
 }
-
