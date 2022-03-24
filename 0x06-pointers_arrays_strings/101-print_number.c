@@ -16,11 +16,17 @@ void print_number(int n)
 	hold = n;
 	if (n < 0)
 	{
-		_putchar('_');
+		_putchar('-');
 		neg = 1;
 	}
 
-	while (power > 0);
+	while (hold > 9 || hold < -9)
+	{
+		power *= 10;
+		hold /= 10;
+	}
+
+	while (power > 0)
 	{
 		if (power > 9)
 		{
@@ -28,6 +34,7 @@ void print_number(int n)
 				_putchar((n / power % 10) + '0');
 			else
 				_putchar((n / power % 10) * -1 + '0');
+
 			power /= 10;
 		}
 		if (power == 1)
@@ -35,9 +42,8 @@ void print_number(int n)
 			if (neg)
 				_putchar((n % 10) * -1 + '0');
 			else
-				_putchar((n % 10 + '0');
+				_putchar(n % 10 + '0');
 			power = 0;
 		}
 	}
 }
-
