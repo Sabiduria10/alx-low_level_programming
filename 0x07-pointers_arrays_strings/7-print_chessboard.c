@@ -1,8 +1,9 @@
 #include "main.h"
 
+
 /**
  * print_chessboard - function that prints a chessboard
- * @a: size of 20 array
+ * @a: size of 2D array
  * Return: none
  */
 
@@ -24,4 +25,3 @@ void print_chessboard(char (*a)[8])
 		i++;
 	}
 }
-
