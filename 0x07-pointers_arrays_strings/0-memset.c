@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * _memset - program that writes a functions to fill memory with a constant
- * byte.
- * @n: size of byte
+ * _memset - program that writes a functions to fill memory with
+ * a constant byte.
+ * @n: size of bytes
  * @b: constant byte
  * @s: memory area to return
  * Return: char
  */
 
-char *memset(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i = 0;
 
