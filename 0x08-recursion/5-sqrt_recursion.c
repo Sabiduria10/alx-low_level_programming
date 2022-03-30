@@ -9,7 +9,7 @@
  * natural square root
  */
 
-int _sqrt_recursion(int n);
+int _sqrt_recursion(int n)
 {
 	return (halp(n, 1));
 }
