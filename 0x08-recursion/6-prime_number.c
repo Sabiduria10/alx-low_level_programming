@@ -16,7 +16,7 @@ int is_prime_number(int n)
 }
 
 /**
- * _aqrt - return square root of number
+ * _sqrt - return square root of number
  * @x: number
  * @i: number incremental acting as divisor
  * Return: square root of 'x'
