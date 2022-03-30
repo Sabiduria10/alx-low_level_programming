@@ -18,8 +18,8 @@ int is_prime_number(int n)
 /**
  * _sqrt - return square root of number
  * @x: number
- * @i: number incremental acting as divisor
- * Return: square root of 'x'
+ * @i: number incrementer acting as divisor
+ * Return: square root of `x`
  */
 
 int _sqrt(int x, int i)
@@ -36,7 +36,7 @@ int _sqrt(int x, int i)
 /**
  * hai - helper function, recursive steps taken
  * @n: number given to original function is_prime_number
- * @d: incremeter divisor
+ * @d: incrementer divisor
  * Return: 0 if not prime, 1 if prime
  */
 
@@ -49,4 +49,3 @@ int hai(int n, int d)
 	else
 		return (hai(n, d + 1));
 }
-
