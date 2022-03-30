@@ -47,6 +47,6 @@ int hai(int n, int d)
 	else if (_sqrt(n, 1) < d)
 		return (1);
 	else
-		return (hai(n, d + 1);
+		return (hai(n, d + 1));
 }
 
