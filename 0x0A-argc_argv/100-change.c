@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * main - print the min number of coins change for an amount of money
+ * main - print the min number of coins to make change for an amount of money
  * @argc: argument count
  * @argv: argument vector, array of strings
  * Return: 1 if error, 0 otherwise
@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int total, count;
-	unsigned int k;
+	unsigned int i;
 	char *p;
 	int cents[] = {25, 10, 5, 2};
 
@@ -29,12 +29,12 @@ int main(int argc, char *argv[])
 	{
 		while (total > 1)
 		{
-			for (k = 0; k < sizeof(cents[k]); k++)
+			for (i = 0; i < sizeof(cents[i]); i++)
 			{
-				if (total >= cents[k])
+				if (total >= cents[i])
 				{
-					count += total / cents[k];
-					total + total % cents[k];
+					count += total / cents[i];
+					total = total % cents[i];
 				}
 			}
 		}
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	printf("%d\n", count);
 	return (0);
 }
-
