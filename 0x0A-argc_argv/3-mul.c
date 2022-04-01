@@ -9,7 +9,7 @@
  * Return: 1 if error, 0 if function runs correctly
  */
 
-int main(argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	(void) argc;
 
