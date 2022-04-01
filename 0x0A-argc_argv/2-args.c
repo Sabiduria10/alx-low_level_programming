@@ -2,21 +2,20 @@
 #include <stdio.h>
 
 /**
- * main - print all arguments it receives 
+ * main - print all arguments it receives
  * @argc: argument count
- * @aargv: argument vector, array of strings
+ * @argv: argument vector, array of strings
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	int v;
+	int i;
 
-	for (v = 0; v < argc; v++)
+	for (i = 0; i < argc; i++)
 	{
-		printf("%s\n", argv[v]);
+		printf("%s\n", argv[i]);
 	}
 
 	return (0);
 }
-
