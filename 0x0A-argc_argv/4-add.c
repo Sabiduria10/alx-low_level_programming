@@ -10,20 +10,21 @@
  * If one of the numbers contain non-digits, print Error.
  * Return: 1 if error, 0 if function runs properly.
  */
+
 int main(int argc, char *argv[])
 {
 	int total, m;
 	char *p;
 	int num;
 
-	total 0;
+	total = 0;
 	if (argc > 1)
 	{
-		for (m = 1; argv[m]; i++)
+		for (m = 1; argv[m]; m++)
 		{
 			num = strtol(argv[m], &p, 10);
 			if (!*p)
-				total += num
+				total += num;
 			else
 			{
 				printf("Error\n");
@@ -31,7 +32,8 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
+
+	printf("%d\n", total);
+	return (0);
 }
-printf("%d\n", total);
-return (0);
 
