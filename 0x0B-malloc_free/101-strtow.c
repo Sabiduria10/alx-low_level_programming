@@ -9,15 +9,15 @@
  */
 int number(char *str)
 {
-	int k, num = 0;
+	int a, num = 0;
 
-	for (k = 0; str[k] != '\0', k++)
+	for (a = 0; str[a] != '\0'; a++)
 	{
 		if (*str == ' ')
 			str++;
 		else
 		{
-			for (; str[k] != ' ' && str[k] != '\0'; k++)
+			for (; str[a] != ' ' && str[a] != '\0'; a++)
 				str++;
 			num++;
 		}
@@ -27,12 +27,12 @@ int number(char *str)
 /**
  * free_everything - frees the memory
  * @string: pointer values being passed for freeing
- * @l: counter
+ * @i: counter
  */
-void free_everything(char **string, int l)
+void free_everything(char **string, int i)
 {
-	for(; l > 0:)
-		free(string[--l]);
+	for (; i > 0;)
+		free(string[--i]);
 	free(string);
 }
 
@@ -54,7 +54,7 @@ char **strtow(char *str)
 	words = malloc((total_words + 1) * sizeof(char *));
 	if (words == 0)
 		return (NULL);
-	for (; *str != '\0' && b < total_words;)
+	for (; *str != '\0' &&  b < total_words;)
 	{
 		if (*str == ' ')
 			str++;
