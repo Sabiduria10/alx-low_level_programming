@@ -10,7 +10,7 @@ int str_len(char *str)
 	int len;
 
 	for (len = 0; *str != '\0'; len++)
-		len++; str++;
+		len++, str++;
 	return (len / 2);
 }
 /**
@@ -26,7 +26,10 @@ void *_calloc(unsigned int bytes, unsigned int size)
 
 	if (bytes == 0 || size == 0)
 		return (NULL);
-	if (size >= UINT_MAX / bytes || >= UINT_MAX / size)
+	if (size >= UINT_MAX / bytes || bytes >= UINT_MAX / size)
+		return (NULL);
+	p = malloc(size * bytes);
+	if (p == NULL)
 		return (NULL);
 	for (i = 0; i < bytes * size; i++)
 		p[i] = 0;
@@ -39,9 +42,9 @@ void *_calloc(unsigned int bytes, unsigned int size)
  * @len_r: length of both arrays
  * Return: void
  */
-void add-arrays(int *mul_result, int *sum_result, int len_r)
+void add_arrays(int *mul_result, int *sum_result, int len_r)
 {
-	int i = 0; len_r2 = len_r - 1, carry = 0, sum;
+	int i = 0, len_r2 = len_r - 1, carry = 0, sum;
 
 	while (i < len_r)
 	{
@@ -53,12 +56,24 @@ void add-arrays(int *mul_result, int *sum_result, int len_r)
 	}
 }
 /**
+ * is_digit - checks for digits
+ * @c: input character to check for digit
+ * Return: 0 failure, 1 success
+ */
+int is_digit(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	printf("Error\n");
+	return (0);
+}
+/**
  * multiply - multiplies 2 #'s, prints result, must be 2 #'s
  * @num1: factor # 1 (is the smaller of 2 numbers)
- * @len_1: lenght of factor 1
+ * @len_1: length of factor 1
  * @num2: factor # 2 (is the larger of 2 numbers)
  * @len_2: length of factor 2
- * @len_r: lenght of result arrays
+ * @len_r: length of result arrays
  * Return: 0 fail, 1 success
  */
 int *multiply(char *num1, int len_1, char *num2, int len_2, int len_r)
@@ -70,32 +85,33 @@ int *multiply(char *num1, int len_1, char *num2, int len_2, int len_r)
 	while (i < len_1)
 	{
 		mul_result = _calloc(sizeof(int), len_r);
-		i2 = len_2 -1, digit = (len_r -1 - i);
+		i2 = len_2 - 1, digit = (len_r - 1 - i);
 		if (!is_digit(num1[i1]))
 			return (NULL);
 		carry = 0;
 		while (i2 >= 0)
 		{
-			if (!is_digit(num[i2]))
+			if (!is_digit(num2[i2]))
 				return (NULL);
-			product = += carry;
+			product = (num1[i1] - '0') * (num2[i2] - '0');
+			product += carry;
 			mul_result[digit] += product % 10;
 			carry = product / 10;
 			digit--, i2--;
 		}
 		add_arrays(mul_result, sum_result, len_r);
 		free(mul_result);
-	i++, i1--;
+	    i++, i1--;
 	}
 	return (sum_result);
 }
 /**
  * print_me - prints my array of the hopeful product here
  * @sum_result: pointer to int array with numbers to add
- * @len_r: lenght of result array
+ * @len_r: length of result array
  * Return: void
  */
-void print_me(int *sum_result, int len-r)
+void print_me(int *sum_result, int len_r)
 {
 	int i = 0;
 
@@ -108,9 +124,9 @@ void print_me(int *sum_result, int len-r)
 	_putchar('\n');
 }
 /**
- * main - multiply 2 input #'s of large lenghts and print result or print Error
+ * main - multiply 2 input #'s of large lengths and print result or print Error
  * @argc: input count of args
- * @argv: input array of strings args
+ * @argv: input array of string args
  * Return: 0, Success
  */
 int main(int argc, char **argv)
