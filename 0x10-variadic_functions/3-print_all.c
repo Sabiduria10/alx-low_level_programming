@@ -3,21 +3,21 @@
 #include "variadic_functions.h"
 
 /**
- * print_i - print int
- * @list: argument of list
- * @s: separator
+ * print_i - prints int
+ * @list: arguement of list
+ * @s: seperator
  * Return: none
  */
 
 void print_i(va_list list, char *s)
 {
-	printf("%s%d", s, va-arg(list, int));
+	printf("%s%d", s, va_arg(list, int));
 }
 
 /**
- * print_c - print char
- * @list: argument char
- * @sep: separator
+ * print_c - prints char
+ * @list: arguement char
+ * @sep: seperator
  */
 
 void print_c(va_list list, char *sep)
@@ -27,7 +27,7 @@ void print_c(va_list list, char *sep)
 
 /**
  * print_s - prints string
- * @sep: separator
+ * @sep: seperator
  * @list: list to print
  * Return: none
  */
@@ -45,18 +45,18 @@ void print_s(va_list list, char *sep)
 /**
  * print_f - prints floats
  * @sep: float to print
- * @list: next argument of list to print
+ * @list: next arguement of list to print
  * Return: none
  */
 
 void print_f(va_list list, char *sep)
 {
-	printf(%s%f, sep, va_arg(list, double));
+	printf("%s%f", sep, va_arg(list, double));
 }
 
 /**
- * print_all - function that prints anything
- * @format: list of types of arguments passed to the function
+ * print_all -  function that prints anything
+ * @format:  list of types of arguments passed to the function
  * Return: nothing
  */
 
@@ -86,6 +86,7 @@ void print_all(const char * const format, ...)
 			{
 				ops[j].f(list, separator);
 				separator = ", ";
+
 			}
 			j++;
 		}
