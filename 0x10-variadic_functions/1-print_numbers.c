@@ -1,12 +1,11 @@
-#include "variadic_functions.h"
 #include <stdio.h>
+#include "variadic_functions.h"
 
 /**
- * print_numbers - function that prints numbers, followed by a new line
- *
- * @separator: string to be printed btw numbers
- * @n: number of integers
- * Return: sum of all parameters
+ * print_numbers - function that prints numbers
+ * @separator: string to be printed between numbers
+ * @n: number of parameters
+ * Return: Sum of all parameters
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -25,6 +24,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%d", aux);
 	}
-	va_end(arguments):
+	va_end(arguments);
 	printf("\n");
 }
