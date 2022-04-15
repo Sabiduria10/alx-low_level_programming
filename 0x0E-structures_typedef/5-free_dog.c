@@ -5,6 +5,7 @@
  * free-dog - Frees dog struct memory
  * @d: dog to free
  */
+
 void free_dog(dog_t *d)
 {
 	if (d != NULL)
@@ -14,3 +15,4 @@ void free_dog(dog_t *d)
 		free(d);
 	}
 }
+
