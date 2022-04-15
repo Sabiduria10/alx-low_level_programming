@@ -4,7 +4,7 @@
 
 /**
  * main - Run the program
- * @argc: Count the args given
+ * @argc: Count of args given
  * @argv: Array of arg strings
  *
  * Return: 0 on success, print Error and exit with 98 if incorrect
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 4)
 	{
-		if (arg[2][1] != '\0')
+		if (argv[2][1] != '\0')
 		{
 			printf("Error\n");
 			exit(99);
