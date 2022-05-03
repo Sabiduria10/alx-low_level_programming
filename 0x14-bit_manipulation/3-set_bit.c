@@ -18,6 +18,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 	revnum = count = num = 0;
 	oldn = *n;
 	if (index > 63)
+		return (-1);
+	while (count < 63)
 	{
 		revnum = revnum << 1;
 		if (count == index)
