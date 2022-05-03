@@ -32,7 +32,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		while (mlen > 0)
 		{
 			if ((m & 1) != (n & 1))
-				flip =+ 1;
+				flip += 1;
 			m = m >> 1;
 			n = n >> 1;
 			mlen--;
