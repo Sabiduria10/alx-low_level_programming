@@ -32,7 +32,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	while (count > 0)
 	{
 		num = num << 1;
-		num =+ revnum & 1;
+		num += revnum & 1;
 		revnum = revnum >> 1;
 		count--;
 	}
